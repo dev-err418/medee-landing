@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import Topbar from "@/components/ui/Topbar/topbar";
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const uncut_sans = localFont({ src: "../fonts/uncut-sans.ttf" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${uncut_sans.className} max-w-7xl mx-auto`}>
+        <Topbar />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
