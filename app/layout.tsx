@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${uncut_sans.className} max-w-7xl mx-auto`}>
         <Topbar />
-        <main>{children}</main>
+        <main className="max-w-5xl mx-auto">{children}</main>
       </body>
     </html>
   );

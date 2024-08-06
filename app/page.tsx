@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Description from "@/components/ui/Description/description";
 
 export default function Page() {
   return (
@@ -18,6 +19,11 @@ export default function Page() {
         <Button variant={"secondary"}>Connexion</Button>
         <Button>Essayer Médée</Button>
       </div>
+      <div className="w-full">
+        <h4 className="font-medium text-lg">Médée</h4>
+        <Description />
+      </div>
+      <div className="h-[100vh]" />
     </div>
   );
 }
