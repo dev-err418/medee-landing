@@ -23,12 +23,21 @@ export default function Page() {
       <div className="w-full h-52 bg-blue-200 rounded-xl mt-8" />
       <div className="w-full">
         {/* 1 er bloc : "Médée" */}
-        <h4 className="font-medium text-lg mt-16 mb-4">Médée</h4>
+        <h4 className="text-sm mt-16 mb-4">Médée</h4>
         <Description />
 
         {/* 2nd bloc : "Notre plateforme" */}
-        <h4 className="font-medium text-lg mt-16 mb-4">Notre plateforme</h4>
+        <h4 className="text-sm mt-16 mb-4">Notre plateforme</h4>
         <Plateforme />
+
+        {/* 3eme bloc : "Avantages" */}
+        <div className="relative flex flex-col items-center mt-16">
+          <div className="absolute bg-blue-200 w-[100vw]">
+            <div className="max-w-5xl mx-auto">
+              <h4 className="text-sm mb-4 mt-16">Avantages</h4>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="h-[100vh]" />
     </div>

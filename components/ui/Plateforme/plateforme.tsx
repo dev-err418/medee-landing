@@ -11,7 +11,7 @@ export default function Plateforme() {
   return (
     <div className="flex flex-row w-full">
       <div className="w-1/2">
-        <p className="font-medium text-5xl">
+        <p className="font-medium text-5xl mb-2">
           Gagnez du temps et de l&apos;efficacité
         </p>
         <Accordion type="single" defaultValue="item-1">
