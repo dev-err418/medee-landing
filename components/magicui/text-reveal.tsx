@@ -24,7 +24,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
   return (
     <div ref={targetRef} className={cn("relative z-0", className)}>
       <div className={"top-0 mx-auto flex items-center"}>
-        <p ref={targetRef} className={"flex flex-wrap text-2xl font-medium"}>
+        <h3 ref={targetRef} className={"flex flex-wrap text-3xl font-medium"}>
           {words.map((word, i) => {
             const start = i / (words.length + 25);
             const end = start + 1 / (words.length + 25);
@@ -34,7 +34,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
               </Word>
             );
           })}
-        </p>
+        </h3>
       </div>
     </div>
   );

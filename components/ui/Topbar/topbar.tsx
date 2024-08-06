@@ -4,7 +4,7 @@ import { MoveUpRight } from "lucide-react";
 
 export default function Topbar() {
   return (
-    <div className="flex flex-row w-full justify-between items-center pt-4 px-4">
+    <div className="flex flex-row w-full max-w-7xl mx-auto justify-between items-center pt-4 px-4">
       <div className="flex flex-row items-center">
         <Image
           alt="Médée logo"

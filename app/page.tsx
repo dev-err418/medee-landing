@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Description from "@/components/ui/Description/description";
+import Plateforme from "@/components/ui/Plateforme/plateforme";
 
 export default function Page() {
   return (
@@ -19,9 +20,15 @@ export default function Page() {
         <Button variant={"secondary"}>Connexion</Button>
         <Button>Essayer Médée</Button>
       </div>
+      <div className="w-full h-52 bg-blue-200 rounded-xl mt-8" />
       <div className="w-full">
-        <h4 className="font-medium text-lg">Médée</h4>
+        {/* 1 er bloc : "Médée" */}
+        <h4 className="font-medium text-lg mt-16 mb-4">Médée</h4>
         <Description />
+
+        {/* 2nd bloc : "Notre plateforme" */}
+        <h4 className="font-medium text-lg mt-16 mb-4">Notre plateforme</h4>
+        <Plateforme />
       </div>
       <div className="h-[100vh]" />
     </div>
