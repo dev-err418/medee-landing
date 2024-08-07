@@ -42,6 +42,8 @@ export default function Page() {
               loop={0}
               cursor
               cursorColor="rgb(37 99 235)"
+              delaySpeed={800}
+              deleteSpeed={40}
             />
           </div>
           <Input
