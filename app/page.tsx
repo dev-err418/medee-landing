@@ -1,3 +1,4 @@
+import Avantages from "@/components/ui/Avantages/avantages";
 import { Button } from "@/components/ui/button";
 import Description from "@/components/ui/Description/description";
 import Plateforme from "@/components/ui/Plateforme/plateforme";
@@ -33,8 +34,9 @@ export default function Page() {
         {/* 3eme bloc : "Avantages" */}
         <div className="relative flex flex-col items-center mt-16">
           <div className="absolute bg-blue-200 w-[100vw]">
-            <div className="max-w-5xl mx-auto">
-              <h4 className="text-sm mb-4 mt-16">Avantages</h4>
+            <div className="max-w-5xl mx-auto my-16">
+              <h4 className="text-sm mb-4">Avantages</h4>
+              <Avantages />
             </div>
           </div>
         </div>
