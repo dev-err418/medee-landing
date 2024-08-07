@@ -7,12 +7,12 @@ interface RippleProps {
 }
 
 const Ripple = React.memo(function Ripple({
-  mainCircleSize = 210,
-  mainCircleOpacity = 0.24,
-  numCircles = 8,
+  mainCircleSize = 50,
+  mainCircleOpacity = 0.4,
+  numCircles = 12,
 }: RippleProps) {
   return (
-    <div className="absolute inset-0 flex items-center justify-center bg-white/5 [mask-image:linear-gradient(to_bottom,white,transparent)]">
+    <div className="absolute inset-0 flex items-center justify-center bg-white/5 [mask-image:linear-gradient(to_bottom,transparent_0%,white_10%,white_60%,transparent_100%)]">
       {Array.from({ length: numCircles }, (_, i) => {
         const size = mainCircleSize + i * 70;
         const opacity = mainCircleOpacity - i * 0.03;
@@ -23,7 +23,8 @@ const Ripple = React.memo(function Ripple({
         return (
           <div
             key={i}
-            className={`absolute animate-ripple rounded-full bg-foreground/25 shadow-xl border [--i:${i}]`}
+            // bg-foreground/25
+            className={`absolute animate-ripple rounded-full shadow-xl bg-blue-200 border [--i:${i}]`}
             style={
               {
                 width: `${size}px`,
@@ -32,7 +33,8 @@ const Ripple = React.memo(function Ripple({
                 animationDelay,
                 borderStyle,
                 borderWidth: "1px",
-                borderColor: `hsl(var(--foreground), ${borderOpacity / 100})`,
+                // borderColor: `hsl(var(--foreground), ${borderOpacity / 100})`,
+                borderColor: `rgba(191 219 254 ${borderOpacity / 100})`,
                 top: "50%",
                 left: "50%",
                 transform: "translate(-50%, -50%) scale(1)",
