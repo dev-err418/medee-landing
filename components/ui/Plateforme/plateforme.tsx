@@ -57,6 +57,11 @@ export default function Plateforme() {
     return () => clearInterval(timer);
   }, []);
 
+  function handleAccordionItemSelect(index: number) {
+    setSelectedIndex(index);
+    setProgressValue(0);
+  }
+
   return (
     <div className="flex flex-row w-full">
       <div className="w-1/2">
@@ -68,6 +73,7 @@ export default function Plateforme() {
             <AccordionItem value={`item-${i}`} key={i}>
               <AccordionTrigger
                 className={`${selectedIndex != i && "opacity-50"}`}
+                onClick={() => handleAccordionItemSelect(i)}
               >
                 <Badge variant={"secondary"} className="p-2 mr-2">
                   {fonctionnalite.Icon}
