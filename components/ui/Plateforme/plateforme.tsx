@@ -66,7 +66,9 @@ export default function Plateforme() {
         <Accordion type="single" value={`item-${selectedIndex}`}>
           {fonctionnalites.map((fonctionnalite, i) => (
             <AccordionItem value={`item-${i}`} key={i}>
-              <AccordionTrigger>
+              <AccordionTrigger
+                className={`${selectedIndex != i && "opacity-50"}`}
+              >
                 <Badge variant={"secondary"} className="p-2 mr-2">
                   {fonctionnalite.Icon}
                 </Badge>
