@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Topbar from "@/components/ui/Topbar/topbar";
 import localFont from "next/font/local";
+import { Toaster } from "@/components/ui/toaster";
 
 const uncut_sans = localFont({ src: "../fonts/uncut-sans.ttf" });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={uncut_sans.className}>
         <Topbar />
         <main className="max-w-5xl mx-auto">{children}</main>
+        <Toaster />
       </body>
     </html>
   );

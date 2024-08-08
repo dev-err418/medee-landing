@@ -1,8 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "../button";
 import { MoveUpRight } from "lucide-react";
+import { useToast } from "../use-toast";
+import { commingSoon } from "../SystemToast/systemToast";
 
 export default function Topbar() {
+  const { toast } = useToast();
+
   return (
     <div className="flex flex-row w-full max-w-7xl mx-auto justify-between items-center pt-4 px-4">
       <div className="flex flex-row items-center">
@@ -25,7 +31,13 @@ export default function Topbar() {
           Contact <MoveUpRight className="h-4 w-4 ml-1" />
         </Button>
       </div>
-      <Button>Connexion</Button>
+      <Button
+        onClick={() => {
+          commingSoon(toast);
+        }}
+      >
+        Connexion
+      </Button>
     </div>
   );
 }

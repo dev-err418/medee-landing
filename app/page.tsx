@@ -3,6 +3,7 @@ import Avantages from "@/components/ui/Avantages/avantages";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Description from "@/components/ui/Description/description";
+import HeroButtons from "@/components/ui/HeroButtons/heroButtons";
 import { Input } from "@/components/ui/input";
 import Plateforme from "@/components/ui/Plateforme/plateforme";
 import { SendHorizonal } from "lucide-react";
@@ -27,10 +28,7 @@ export default function Page() {
         <br />
         pour une prise en charge efficace
       </h2>
-      <div className="mt-4 space-x-4">
-        <Button variant={"secondary"}>Connexion</Button>
-        <Button>Essayer Médée</Button>
-      </div>
+      <HeroButtons />
       <div className="w-full h-80 rounded-xl mt-8 relative">
         <div className="relative flex flex-col h-12 justify-center">
           <div className="absolute z-20 w-[500px] self-center mt-[14rem] h-14 flex items-center pl-6">
