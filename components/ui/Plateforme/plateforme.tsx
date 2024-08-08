@@ -44,7 +44,7 @@ export default function Plateforme() {
           setSelectedIndex((prevIndex) => {
             console.log(prevIndex);
             console.log("prev + 1 % 3", (prevIndex + 1) % 3);
-            return (prevIndex + 2) % 3;
+            return (prevIndex + 1) % 3;
           });
 
           return 0;
